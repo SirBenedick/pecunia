@@ -1,1 +1,1 @@
-worker: python pecunia.py
+web: python server.py
