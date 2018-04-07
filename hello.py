@@ -1,7 +1,7 @@
 from flask import Flask
 # import telepot
 # import datetime
-#example = environ.get('EXAMPLE)
+example = environ.get('EXAMPLE)
 
 app = Flask(__name__)
 
@@ -22,9 +22,9 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, World!'
 
-# @app.route('/env')
-# def hello_world():
-#     return example
+@app.route('/env')
+def hello_example():
+    return example
 
 @app.route('/hello/<name>')
 def hello_name(name):
