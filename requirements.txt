@@ -1,5 +1,7 @@
 # List of required packages (Dependencies)
 redis
+os
+telebot
 
 # If you need to specify a version
 requests==2.16.5
