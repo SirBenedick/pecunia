@@ -1,4 +1,6 @@
 from flask import Flask
+import os
+
 # import telepot
 # import datetime
 #example = environ.get('EXAMPLE)
@@ -20,7 +22,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    times = int(os.environ.get('EXAMPLE',3))
+    return times
 
 if __name__ == "__main__":
 	app.run()
