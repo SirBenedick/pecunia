@@ -22,7 +22,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    times = os.environ.get('EXAMPLE',3)
+    times = os.environ.get('BOT_TOKEN',3)
     return times
 
 if __name__ == "__main__":
