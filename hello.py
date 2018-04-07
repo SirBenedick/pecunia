@@ -20,9 +20,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    console.log("Test")
-    console.log(BOT_TOKEN)
-    return 'Hello world'
+    return BOT_TOKEN
 
 if __name__ == "__main__":
 	app.run()
