@@ -22,9 +22,9 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, World!'
 
-@app.route('/env')
-def hello_example():
-    return example
+# @app.route('/env')
+# def hello_example():
+#     return example
 
 @app.route('/hello/<name>')
 def hello_name(name):
