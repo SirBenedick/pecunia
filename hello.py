@@ -5,15 +5,15 @@ import datetime
 BOT_TOKEN = os.environ.get('BOT_TOKEN',3)
 app = Flask(__name__)
 
-def handle(msg):
-        chat_id = msg['chat']['id']
-        command = msg['text']
-        user = str(chat_id)
-        msg = ""
-        print( 'User: ' + user + ' Nachricht: ' + str(command) )
-
-        elif command == '/time':
-                bot.sendMessage(chat_id, str(datetime.datetime.now()))
+# def handle(msg):
+#         chat_id = msg['chat']['id']
+#         command = msg['text']
+#         user = str(chat_id)
+#         msg = ""
+#         print( 'User: ' + user + ' Nachricht: ' + str(command) )
+#
+#         elif command == '/time':
+#                 bot.sendMessage(chat_id, str(datetime.datetime.now()))
 
 #bot = telepot.Bot(BOT_TOKEN)
 #bot.message_loop(handle)
