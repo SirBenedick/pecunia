@@ -2,7 +2,7 @@ from flask import Flask
 import os
 import telepot
 import datetime
-BOT_TOKEN = os.environ.get('BOT_TOKEN',3)
+#BOT_TOKEN = os.environ.get('BOT_TOKEN',3)
 app = Flask(__name__)
 
 # def handle(msg):
