@@ -1,9 +1,8 @@
 from flask import Flask
 import telepot
-import random
 import datetime
 import time
-import subprocess
+example = environ.get('EXAMPLE)
 
 app = Flask(__name__)
 
@@ -14,20 +13,19 @@ def handle(msg):
         msg = ""
         print( 'User: ' + user + ' Nachricht: ' + str(command) )
 
-        if command == '/roll':
-                bot.sendMessage(chat_id, random.randint(1,6))
         elif command == '/time':
                 bot.sendMessage(chat_id, str(datetime.datetime.now()))
-        elif command == '/temp':
-                msg = subprocess.getoutput("/opt/vc/bin/vcgencmd measure_temp")
-                bot.sendMessage(chat_id,msg)
-                print(user + ": " + msg )
-bot = telepot.Bot('431470615:AAFPuJvtiSWiAr2NdYxDVYwXlggUgq09hRQ')
+
+bot = telepot.Bot('43211234')
 bot.message_loop(handle)
 
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
+
+@app.route('/env')
+def hello_world():
+    return example
 
 @app.route('/hello/<name>')
 def hello_name(name):
