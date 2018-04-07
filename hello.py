@@ -1,7 +1,6 @@
 from flask import Flask
 import telepot
 import datetime
-import time
 example = environ.get('EXAMPLE)
 
 app = Flask(__name__)
