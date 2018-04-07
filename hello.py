@@ -15,8 +15,8 @@ def handle(msg):
         elif command == '/time':
                 bot.sendMessage(chat_id, str(datetime.datetime.now()))
 
-bot = telepot.Bot(BOT_TOKEN)
-bot.message_loop(handle)
+#bot = telepot.Bot(BOT_TOKEN)
+#bot.message_loop(handle)
 
 @app.route('/')
 def hello_world():
