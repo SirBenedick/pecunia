@@ -11,7 +11,7 @@ config = json.load(open('private/config.json'))
 BOT_TOKEN = config['telegram']['token']
 VALID_USER = int(config['telegram']['account'])
 
-sheet = googleConnect.getSheet(2)
+
 
 checkValue = False
 checkPlace = False
@@ -65,6 +65,7 @@ def handle(msg):
 
 
 def addPrice(msg):
+    sheet = googleConnect.getSheet(2)
     chat_id = msg['chat']['id']
 
     global value
@@ -88,6 +89,7 @@ def addPrice(msg):
     bot.sendMessage(chat_id, "Values added.")
 
 def expenses(msg):
+    sheet = googleConnect.getSheet(2)
     spending = 0.0
     chat_id = msg['chat']['id']
     date = msg['text']
