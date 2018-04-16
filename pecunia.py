@@ -11,8 +11,6 @@ config = json.load(open('private/config.json'))
 BOT_TOKEN = config['telegram']['token']
 VALID_USER = int(config['telegram']['account'])
 
-
-
 checkValue = False
 checkPlace = False
 sentMessage = False

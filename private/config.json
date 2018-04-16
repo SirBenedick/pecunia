@@ -1,0 +1,6 @@
+{
+    "telegram":{
+        "token":"""Telegram bot token""",
+        "account":"""Your Account ID"""
+    }
+}
