@@ -13,7 +13,6 @@ VALID_USER = int(config['telegram']['account'])
 
 checkValue = False
 checkPlace = False
-sentMessage = False
 value = 0.0
 place = "nowhere"
 
@@ -31,7 +30,7 @@ def handle(msg):
     if(chat_id != VALID_USER):
         #bot.sendMessage(chat_id, "Darfst niicht")
         return
-        #string mit zahl -> Problem
+    #string mit zahl -> Problem
     if re.search(r"\d\d[-]\d\d", command):
         expenses(msg)
 
@@ -47,8 +46,13 @@ def handle(msg):
     elif command == '/guide':
          bot.sendMessage(chat_id, "18-04 -> Expenses for April 2018 \n 22,32 new entry")
 
-    # elif command == 'A':
-    #     bot.sendMessage(chat_id,"B")
+    elif command == '/clear':
+         checkPlace = False
+         checkValue = False
+         value = 0
+         place = "nowhere"
+
+         bot.sendMessage(chat_id,"B")
     else:
         if(checkValue):
             bot.sendMessage(chat_id, "Adding place and value.")
