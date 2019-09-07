@@ -1,0 +1,17 @@
+service: telegram-bot
+
+provider:
+  name: aws
+  runtime: python3.6
+
+functions:
+  pecuniaBot:
+    handler: pecunia.lambda_handler
+    events:
+        - http:
+            path: /
+            method: any
+  
+plugins:
+  - serverless-python-requirements
+  
